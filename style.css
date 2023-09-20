@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  font-family: "Red Hat Display", sans-serif;
+  background: var(--pale-blue);
+  background-image: url("./images/pattern-background-desktop.svg");
+  background-repeat: no-repeat;
+}
+
+.card {
+  width: 450px;
+  border-radius: 1rem;
+  background-color: white;
+}
+
+.card-img {
+  width: 100%;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.card-content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+}
+
+.card-title {
+  font-size: 24px;
+  color: var(--dark-blue);
+  font-weight: 900;
+}
+
+.card-desc {
+  color: var(--desaturated-blue);
+  font-size: 18px;
+}
+
+.card-music {
+  background-color: var(--very-pale-blue);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+}
+
+.card-music__center {
+  margin-left: 1rem;
+}
+
+.card-music b {
+  font-weight: 900;
+  font-size: 18px;
+  color: var(--dark-blue);
+  margin-bottom: 10px;
+}
+
+.card-music p {
+  color: var(--desaturated-blue);
+}
+
+.card-music a {
+  margin-left: auto;
+  color: var(--bright-blue);
+}
+
+.card-music a:hover {
+  text-decoration: none;
+  opacity: 0.6;
+}
+
+.card-btn__add,  .card-btn__cancel {
+  width: 100%;
+  cursor: pointer;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 900;
+  background-color: var(--bright-blue);
+  box-shadow: 0px 20px 25px 0px rgba(56, 42, 225, 0.2);
+}
+
+.card-btn__cancel {
+  padding: 0;
+  box-shadow: none;
+  background-color: transparent;
+  color: var(--desaturated-blue);
+}
+
+.card-btn__add:hover {
+  opacity: 0.7;
+}
+
+.card-btn__cancel:hover {
+  color: var(--dark-blue);
+}
+
+@media (max-width: 400px) {
+  body {
+    padding: 1rem;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .card-music b {
+    font-size: 16px;
+  }
+
+  .card-content p {
+    font-size: 14px;
+  }
+}
+
+
+.attribution {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translate(-50%);
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
